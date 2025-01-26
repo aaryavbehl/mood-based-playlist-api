@@ -1,3 +1,5 @@
+![Local Image](./assets/demo.png)
+
 # Mood Based Playlist API
 
 This is a project that provides a simple API for recommending playlist based on a user's mood and a song limit. It also includes a frontend that provides easy interaction with the API which will allow users to fetch playlists, add songs, and explore available moods.
