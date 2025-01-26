@@ -1,0 +1,125 @@
+body {
+    font-family: Helvetica;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    animation: rgbFade 5s infinite;
+}
+
+h2 {
+    color: white;
+}
+
+.container {
+    margin: 20px
+}
+
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+input[type="text"], input[type="number"] {
+    color: black;
+    background-color: white;
+    border 1px solid white;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type="text"]::placeholder, input[type="number"]::placeholder {
+    color: initial;
+}
+
+#result {
+    color: cyan;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.terminal-loader {
+    border: 0.1em solid #333;
+    background-color: #1a1a1a;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    padding: 1.5em 1em;
+    width: 80%;
+    box-shadow 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 20px auto;
+    word-wrap: break-word;
+}
+
+.terminal-text {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+@keyframes rgbFade {
+    0% { color: rgb(255, 0, 0); }
+    14% { color: rgb(255, 127, 0); }
+    28% { color: rgb(255, 255, 0); }
+    42% { color: rgb(0, 255, 0); }
+    57% { color: rgb(0, 0, 255); }
+    71% { color: rgb(75, 0, 130); }
+    85% { color: rgb(148, 0, 211); }
+    100% { color: rgb(255, 0, 0); }
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typeAndDelete {
+    0%,
+    10% {
+        width: 0;
+    }
+    45%
+    55% {
+        width: 6.2em;
+    }
+    90%,
+    100% {
+        width: 0;
+    }
+}
